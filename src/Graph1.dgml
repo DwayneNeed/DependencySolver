@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="TopToBottom" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="AddDisk" Bounds="192.878333333333,235.215,128.836666666667,85.9200000000001" Group="Expanded" Label="AttachDisk" LayoutSettings="List" />
+    <Node Id="CreateDisk" Bounds="196.946666666667,117.6075,100.7,57.96" Group="Expanded" LayoutSettings="List" />
+    <Node Id="CreateNIC" Bounds="413.335,0,97.9233333333333,57.96" Group="Expanded" LayoutSettings="List" />
+    <Node Id="CreateVM" Bounds="327.74,89.6475,103.113333333333,113.88" Group="Expanded" LayoutSettings="List" />
+    <Node Id="DeleteDisk" Bounds="0,795.2925,96.5933333333333,57.96" Group="Expanded" LayoutSettings="List" />
+    <Node Id="DeleteNIC" Bounds="383.388333333333,795.2925,93.8166666666667,57.96" Group="Expanded" LayoutSettings="List" />
+    <Node Id="DeleteVM" Bounds="219.946666666667,649.725,100.7,113.88" Group="Expanded" LayoutSettings="List" />
+    <Node Id="DetachDisk" Bounds="114.878333333333,352.8225,128.836666666667,85.9200000000001" Group="Expanded" Label="DetachDisk" LayoutSettings="List" />
+    <Node Id="Disk" Bounds="202.946666666667,143.6075,88.7,25.96" Label="Disk (output)" />
+    <Node Id="Disk(output)" Bounds="120.878333333333,378.8225,88.7,25.96" Label="Disk (output)" />
+    <Node Id="Disk(output)1" Bounds="225.946666666667,675.725,88.6999999999998,25.9599999999999" Label="Disk (output)" />
+    <Node Id="Disk1" Bounds="198.878333333333,261.215,80.51,25.96" Label="Disk (input)" />
+    <Node Id="Disk2" Bounds="8.04166666666667,821.2925,80.51,25.96" Label="Disk (input)" />
+    <Node Id="Image(output)" Bounds="130.645,26,99.3033333333333,25.96" Label="Image (output)" />
+    <Node Id="NIC" Bounds="419.335,26,85.9233333333333,25.96" Label="NIC (output)" />
+    <Node Id="NIC(input)" Bounds="333.74,115.6475,77.7333333333333,25.96" Label="NIC (input)" />
+    <Node Id="NIC(output)" Bounds="225.946666666667,703.685,85.9233333333332,25.96" Label="NIC (output)" />
+    <Node Id="NIC1" Bounds="391.43,821.2925,77.7333333333333,25.96" Label="NIC (input)" />
+    <Node Id="PlatformImage" Bounds="277.645,26,99.3033333333334,25.96" Label="Image (output)" />
+    <Node Id="PlatformImage1" Bounds="333.74,143.6075,91.1133333333333,25.96" Label="Image (input)" />
+    <Node Id="StartVm" Bounds="110.878333333333,470.43,128.836666666667,57.96" Group="Expanded" Label="StartVM" LayoutSettings="List" />
+    <Node Id="StopVM" Bounds="205.878333333333,560.0775,128.836666666667,57.96" Group="Expanded" LayoutSettings="List" />
+    <Node Id="UseLinuxPlatformImage" Bounds="271.645,0,111.303333333333,57.96" Group="Expanded" Label="LinuxImage" LayoutSettings="List" />
+    <Node Id="VM" Bounds="198.878333333333,289.175,116.836666666667,25.96" Label="VM (input/output)" />
+    <Node Id="VM(input/output)" Bounds="120.878333333333,406.7825,116.836666666667,25.96" Label="VM (input/output)" />
+    <Node Id="VM1" Bounds="225.946666666667,731.645,76.3633333333337,25.96" Label="VM (input)" />
+    <Node Id="VM2" Bounds="116.878333333333,496.43,116.836666666667,25.96" Label="VM (input/output)" />
+    <Node Id="VM3" Bounds="211.878333333333,586.0775,116.836666666667,25.96" Label="VM (input/output)" />
+    <Node Id="VM_RB" Bounds="333.74,171.5675,84.5533333333333,25.96" Label="VM (output)" />
+    <Node Id="WindowsImage" Bounds="119.421666666667,0,121.75,57.96" Group="Expanded" LayoutSettings="List" />
+  </Nodes>
+  <Links>
+    <Link Source="AddDisk" Target="Disk1" Category="Contains" />
+    <Link Source="AddDisk" Target="VM" Category="Contains" />
+    <Link Source="CreateDisk" Target="Disk" Category="Contains" />
+    <Link Source="CreateNIC" Target="NIC" Category="Contains" />
+    <Link Source="CreateVM" Target="NIC(input)" Category="Contains" />
+    <Link Source="CreateVM" Target="PlatformImage1" Category="Contains" />
+    <Link Source="CreateVM" Target="VM_RB" Category="Contains" />
+    <Link Source="DeleteDisk" Target="Disk2" Category="Contains" />
+    <Link Source="DeleteNIC" Target="NIC1" Category="Contains" />
+    <Link Source="DeleteVM" Target="DeleteDisk" Bounds="104.3203125,733.338623046875,115.626358032227,61.2545776367188" />
+    <Link Source="DeleteVM" Target="DeleteNIC" Bounds="320.646667480469,743.674621582031,62.9722290039063,46.2875366210938" />
+    <Link Source="DeleteVM" Target="Disk(output)1" Category="Contains" />
+    <Link Source="DeleteVM" Target="NIC(output)" Category="Contains" />
+    <Link Source="DeleteVM" Target="VM1" Category="Contains" />
+    <Link Source="DetachDisk" Target="Disk(output)" Category="Contains" />
+    <Link Source="DetachDisk" Target="VM(input/output)" Category="Contains" />
+    <Link Source="Disk" Target="DeleteDisk" Bounds="407.193102121731,199.693409423828,212.252605759325,97.9424220005168" />
+    <Link Source="Disk" Target="Disk1" Bounds="310.291417186278,199.693409423828,55.7642674417386,55.6431655441234" />
+    <Link Source="Disk(output)" Target="Disk1" Bounds="511.969016230517,143.884893573174,69.3330035220274,2.59662131766393" />
+    <Link Source="Disk(output)" Target="Disk2" Bounds="646.222306515695,161.122486572266,108.034091941311,68.1702948308051" />
+    <Link Source="NIC" Target="NIC(input)" Bounds="117.088491984075,167.959995727539,81.955996884281,30.9044774753238" />
+    <Link Source="NIC" Target="NIC1" Bounds="204.090545815089,79.8484064527592,63.0816537783792,56.0241919436013" />
+    <Link Source="PlatformImage" Target="PlatformImage1" Bounds="228.658625133814,52.9747128295898,58.5958198135178,82.6190893274103" />
+    <Link Source="StartVm" Target="VM2" Category="Contains" />
+    <Link Source="StopVM" Target="VM3" Category="Contains" />
+    <Link Source="UseLinuxPlatformImage" Target="PlatformImage" Category="Contains" />
+    <Link Source="VM" Target="VM(input/output)" Bounds="539.301954241476,172.244723171886,33.0066341031677,1.26802054992967" />
+    <Link Source="VM" Target="VM1" Bounds="539.454789615737,169.699901775133,509.513644623868,9.70163617800614" />
+    <Link Source="VM" Target="VM3" Bounds="539.304706017844,153.38257501056,350.680965530047,14.4513050833995" />
+    <Link Source="VM(input/output)" Target="VM" Bounds="548.295320138309,172.590222586778,33.0066341031677,1.26802054992967" />
+    <Link Source="VM(input/output)" Target="VM1" Bounds="698.293469835629,179.449123097368,350.673353910444,0.749875991661611" />
+    <Link Source="VM(input/output)" Target="VM2" Bounds="698.138620908143,164.418519223553,33.0725047946373,4.22357911194302" />
+    <Link Source="VM(input/output)" Target="VM3" Bounds="698.138620908143,168.175815913875,191.851915156777,6.07643605782206" />
+    <Link Source="VM2" Target="VM1" Bounds="857.130136502296,162.884830727406,191.860461087091,13.9791019363459" />
+    <Link Source="VM2" Target="VM3" Bounds="856.978039351178,156.172559609603,33.0305647723143,2.72915811744201" />
+    <Link Source="VM3" Target="VM" Bounds="548.297073821131,153.012006136509,350.680965530047,14.4513050833994" />
+    <Link Source="VM3" Target="VM1" Bounds="1015.11702845656,163.307754325333,34.0413587137772,7.13840747591809" />
+    <Link Source="VM3" Target="VM2" Bounds="865.947474578864,155.431457932134,33.0305647723141,2.72915811744201" />
+    <Link Source="VM_RB" Target="VM" Bounds="275.388971422387,195.919994812012,168.06559103837,72.4953388056237" />
+    <Link Source="VM_RB" Target="VM1" Bounds="288.48812294907,169.16991126983,760.479534660638,10.4798043426617" />
+    <Link Source="VM_RB" Target="VM3" Bounds="288.338036909771,152.46571904055,601.643430016892,16.609268709488" />
+    <Link Source="WindowsImage" Target="CreateVM" Bounds="229.332824707031,57.9599990844727,90.6591186523438,53.578857421875" />
+    <Link Source="WindowsImage" Target="Image(output)" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="LayoutSettings" DataType="Microsoft.VisualStudio.Diagrams.View.GroupLayoutStyle" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>

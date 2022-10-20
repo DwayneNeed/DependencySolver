@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.csproj", "{9A924967-A880-4427-8491-252A7B5ED8B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformGraph.Contracts", "TransformGraph\TransformGraph.Contracts.csproj", "{6993B073-C553-4BE1-A690-06CF82BA9A9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformGraphTests", "TransformGraphTests\TransformGraphTests.csproj", "{FD18FB8A-0CFD-421D-9544-03E1F2183305}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformProvider.Reflection.Contracts", "TransformProvider.Reflection.Contracts\TransformProvider.Reflection.Contracts.csproj", "{21B70C70-8548-4121-A3E2-4684A856E488}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformProvider.Reflection", "TransformProvider.Reflection\TransformProvider.Reflection.csproj", "{B04181CF-B65E-4D01-89DD-646A5207212E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformProvider.Reflection.Tests", "TransformProvider.Reflection.Tests\TransformProvider.Reflection.Tests.csproj", "{6610E6D2-A548-47E8-BBF3-5ED6CD9B946A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26371BC5-8E9B-4F91-958A-DF7FFF1923D9}"
+	ProjectSection(SolutionItems) = preProject
+		Graph1.dgml = Graph1.dgml
+		Notes.txt = Notes.txt
+		ResourceStateGraph.dgml = ResourceStateGraph.dgml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A924967-A880-4427-8491-252A7B5ED8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A924967-A880-4427-8491-252A7B5ED8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A924967-A880-4427-8491-252A7B5ED8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A924967-A880-4427-8491-252A7B5ED8B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6993B073-C553-4BE1-A690-06CF82BA9A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6993B073-C553-4BE1-A690-06CF82BA9A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6993B073-C553-4BE1-A690-06CF82BA9A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6993B073-C553-4BE1-A690-06CF82BA9A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD18FB8A-0CFD-421D-9544-03E1F2183305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD18FB8A-0CFD-421D-9544-03E1F2183305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD18FB8A-0CFD-421D-9544-03E1F2183305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD18FB8A-0CFD-421D-9544-03E1F2183305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B70C70-8548-4121-A3E2-4684A856E488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B70C70-8548-4121-A3E2-4684A856E488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B70C70-8548-4121-A3E2-4684A856E488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B70C70-8548-4121-A3E2-4684A856E488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B04181CF-B65E-4D01-89DD-646A5207212E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04181CF-B65E-4D01-89DD-646A5207212E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04181CF-B65E-4D01-89DD-646A5207212E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04181CF-B65E-4D01-89DD-646A5207212E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6610E6D2-A548-47E8-BBF3-5ED6CD9B946A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6610E6D2-A548-47E8-BBF3-5ED6CD9B946A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6610E6D2-A548-47E8-BBF3-5ED6CD9B946A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6610E6D2-A548-47E8-BBF3-5ED6CD9B946A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66CA2D19-02B1-4C64-B302-C6F59D744A5E}
+	EndGlobalSection
+EndGlobal

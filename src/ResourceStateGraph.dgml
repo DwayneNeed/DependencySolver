@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="TopToBottom" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="IsRunning=False" Bounds="197.98,379.72,113.213333333333,25.96" Label="IsRunning = False" />
+    <Node Id="IsRunning=True" Bounds="119.305,115.96,109.863333333333,25.96" Label="IsRunning = True" />
+    <Node Id="IsRunning=True1" Bounds="197.98,247.84,109.863333333333,25.96" Label="IsRunning = True" />
+    <Node Id="IsRunning=True2" Bounds="189.305,511.6,113.213333333333,25.96" Label="IsRunning = False" />
+    <Node Id="Lun0Attached=Fakse" Bounds="189.305,539.56,130.65,25.96" Label="DiskAttached = False" />
+    <Node Id="Lun0Attached=False" Bounds="119.305,143.92,130.65,25.96" Label="DiskAttached = False" />
+    <Node Id="Lun0Attached=True" Bounds="197.98,275.8,127.3,25.96" Label="DiskAttached = True" />
+    <Node Id="Lun0Attached=True1" Bounds="197.98,407.68,127.3,25.96" Label="DiskAttached = True" />
+    <Node Id="NullVMState" Bounds="282.186666666667,0,112.886666666667,44" Group="Expanded" Label="Null VM State" LayoutSettings="List" />
+    <Node Id="VMState" Bounds="113.305,89.96,142.65,85.92" Group="Expanded" Label="VM State" LayoutSettings="List" />
+    <Node Id="VMState1" Bounds="191.98,221.84,139.3,85.9200000000001" Group="Expanded" Label="VM State" LayoutSettings="List" />
+    <Node Id="VMState2" Bounds="183.305,485.6,142.65,85.9200000000001" Group="Expanded" Label="VM State" LayoutSettings="List" />
+    <Node Id="VMState3" Bounds="191.98,353.72,139.3,85.9200000000001" Group="Expanded" Label="VM State" LayoutSettings="List" />
+  </Nodes>
+  <Links>
+    <Link Source="NullVMState" Target="VMState" Bounds="237.827682495117,44,59.9326019287109,40.1548461914063" Label="CreateVM" LabelBounds="255.07,59,52.5599999999999,15.96" />
+    <Link Source="VMState" Target="IsRunning=True" Category="Contains" />
+    <Link Source="VMState" Target="Lun0Attached=False" Category="Contains" />
+    <Link Source="VMState" Target="NullVMState" Bounds="177.01985168457,39.3374099731445,96.4695892333984,50.6225891113281" Label="DeleteVM" LabelBounds="127.575841784197,65.5945911894536,52.4466666666666,15.96" />
+    <Link Source="VMState" Target="VMState1" Bounds="227.192749023438,175.880004882813,23.9042205810547,37.4503479003906" Label="AttachDisk" LabelBounds="249.183966736528,191.702783451521,56.69,15.96" />
+    <Link Source="VMState" Target="VMState2" Bounds="91.5796890258789,175.726181030273,84.1714401245117,311.795822143555" Label="StopVM" LabelBounds="81.2633333333332,322.76,42.3666666666667,15.96" />
+    <Link Source="VMState1" Target="IsRunning=True1" Category="Contains" />
+    <Link Source="VMState1" Target="Lun0Attached=True" Category="Contains" />
+    <Link Source="VMState1" Target="NullVMState" Bounds="309.886932373047,53,28.7430725097656,168.839996337891" Label="DeleteVM" LabelBounds="286.183333333333,124.94,52.4466666666667,15.96" />
+    <Link Source="VMState1" Target="VMState" Bounds="174.418594360352,184.840026855469,25.9870452880859,36.9999694824219" Label="DetachDisk" LabelBounds="115.17884517362,188.167915887287,59.5733333333334,15.96" />
+    <Link Source="VMState1" Target="VMState3" Bounds="288.427124023438,307.760009765625,5.17788696289063,37.5132446289063" Label="StopVM" LabelBounds="294.105,322.76,42.3666666666667,15.96" />
+    <Link Source="VMState2" Target="IsRunning=True2" Category="Contains" />
+    <Link Source="VMState2" Target="Lun0Attached=Fakse" Category="Contains" />
+    <Link Source="VMState2" Target="NullVMState" Bounds="325.954986572266,45.531551361084,134.675018310547,460.197513580322" Label="DeleteVM" LabelBounds="408.183333333333,256.82,52.4466666666667,15.96" />
+    <Link Source="VMState2" Target="VMState" Bounds="42.6300010681152,170.220809936523,140.674991607666,336.154434204102" Label="StartVM" LabelBounds="0,322.76,42.6299999999999,15.96" />
+    <Link Source="VMState2" Target="VMState3" Bounds="223.189147949219,447.825561523438,4.49359130859375,37.7744445800781" Label="AttachDisk" LabelBounds="165.999139784946,454.64,56.6899999999999,15.96" />
+    <Link Source="VMState3" Target="IsRunning=False" Category="Contains" />
+    <Link Source="VMState3" Target="Lun0Attached=True1" Category="Contains" />
+    <Link Source="VMState3" Target="NullVMState" Bounds="330.653625488281,49.0556793212891,76.5984191894531,307.241195678711" Label="DeleteVM" LabelBounds="369.183333333333,190.88,52.4466666666667,15.96" />
+    <Link Source="VMState3" Target="VMState1" Bounds="229.380004882813,316.197814941406,5.22239685058594,37.5221862792969" Label="StartVM" LabelBounds="186.25,322.76,42.63,15.96" />
+    <Link Source="VMState3" Target="VMState2" Bounds="283.817047119141,439.640014648438,3.58660888671875,37.5735473632813" Label="DetachDisk" LabelBounds="287.903673574242,454.64,59.5733333333333,15.96" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="LayoutSettings" DataType="Microsoft.VisualStudio.Diagrams.View.GroupLayoutStyle" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+</DirectedGraph>

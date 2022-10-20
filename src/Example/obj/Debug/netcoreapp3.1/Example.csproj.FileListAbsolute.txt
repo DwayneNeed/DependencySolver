@@ -1,0 +1,12 @@
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\bin\Debug\netcoreapp3.1\Example.deps.json
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\bin\Debug\netcoreapp3.1\Example.dll
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\bin\Debug\netcoreapp3.1\Example.pdb
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\obj\Debug\netcoreapp3.1\Example.AssemblyInfoInputs.cache
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\obj\Debug\netcoreapp3.1\Example.AssemblyInfo.cs
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\obj\Debug\netcoreapp3.1\Example.csproj.CoreCompileInputs.cache
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\obj\Debug\netcoreapp3.1\Example.dll
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\obj\Debug\netcoreapp3.1\Example.pdb
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\bin\Debug\netcoreapp3.1\TransformProvider.Reflection.Contracts.dll
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\bin\Debug\netcoreapp3.1\TransformProvider.Reflection.Contracts.pdb
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\obj\Debug\netcoreapp3.1\Example.csprojAssemblyReference.cache
+C:\Users\dwayn\source\repos\DependencySolver\src\Example\obj\Debug\netcoreapp3.1\Example.csproj.CopyComplete

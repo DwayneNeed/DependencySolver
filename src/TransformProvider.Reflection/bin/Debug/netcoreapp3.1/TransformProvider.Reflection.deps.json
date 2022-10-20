@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "TransformProvider.Reflection/1.0.0": {
+        "dependencies": {
+          "TransformGraph.Contracts": "1.0.0",
+          "TransformProvider.Reflection.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "TransformProvider.Reflection.dll": {}
+        }
+      },
+      "TransformGraph.Contracts/1.0.0": {
+        "dependencies": {
+          "TransformProvider.Reflection.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "TransformGraph.Contracts.dll": {}
+        }
+      },
+      "TransformProvider.Reflection.Contracts/1.0.0": {
+        "runtime": {
+          "TransformProvider.Reflection.Contracts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TransformProvider.Reflection/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TransformGraph.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TransformProvider.Reflection.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,76 @@
+ResourceDescriptor
+    Type
+    PredicateNames
+
+TransformDescriptor
+    Type
+    ResourceBindings
+
+ResourceBindingDescriptor
+    Name
+    ResourceType
+    InputPredicates // null means no input, empty means no constraint
+    OutputPredicates // null means no output, empty means no constraint
+
+TransformGraphInventoryBuilder
+    TransformGraphInventory Build(IEnumerable<ResourceDescriptor>, IEnumerable<TransformDescriptor>)
+        Throw if
+            Resource or Transform has no type - bad input
+            Types are not a unique key - duplicated or both
+
+        Build maps of valid resources and transforms
+            Resources: type -> ResourceDescriptor
+            Transforms: type -> TransformDescriptor
+            ResourceBindings: type -> <TransformResourceBindingDescriptor>
+
+        Produce list of warnings for invalid resources and transforms
+            UnreferencedResource: Resource {r} is not referenced by any ResourceBinding on any Transform.
+            ResourceNotCreated: Resource {r} is not created by any Transform by an output-only ResourceBinding.
+            ResourceNotDestroyed: Resource {r} is not destroyed by any Transform by an input-only ResourceBinding.
+            ResourceHasNoPredicates: Resource {r} has no predicates. 
+            MissingResource: ResourceBinding {rb} on Transform {t} expects type {t} but this type is not described as a resource.
+            InvalidPredicate: ResourceBinding {rb} on Transform {t} declares predicate {p} which is not available on resource type {t}.
+
+ResourcePredicatesTransform
+    ResourceDescriptor
+    FromPredicates (name/value)
+    TransfromDescriptor
+    ResourceBindingDescriptor
+    ToPredicates (name/value)
+
+ResourcePredicates
+    ResourceDescriptor
+    Predicates (name/value)
+
+TransformGraphFlowAnalyzer
+    TransformFlowGraph Build(TransformGraphInventory)
+        foreach Resource type
+            foreach TransformResourceBindingDescriptor(type)
+                if(inputPredicates == null)
+                    ResourceTransformEdge = <type,null,TransformResourceBindingDescriptor,PredicateSet>
+                    add to graph edges
+                    push ResourcePredicateSet onto evaluation stack
+
+        while stack not empty
+            pop ResourcePredicateSet
+            // where can I go from here?
+            foreach TransformResourceBindingDescriptor(type)
+                if (input predicates match PredicateSet)
+                    if(output predicates == null)
+                        ResourceTransformEdge = <type,PredicateSet,TransformResourceBindingDescriptor,null>
+                        add to graph edges
+                    else
+                        ResourcePredicates = Combine output predicates with ResourcePredicates
+                        if ResourcePredicates not in graph
+                            ResourcePredicatesTransform = <type,PredicateSet,TransformResourceBindingDescriptor,ResourcePredicates>
+                            add to graph edges
+                            push ResourcePredicates onto evaluation stack
+
+
+        Produce warnings
+            ResourceNotDestroyed - no transforms available from resource state {x}
+            binding not matched - no resource state matched input predicates
+            transform unsatisfied - transform {x} has unbound resource bindings between
+
+        APIs (butterfly views)
+            ResourcePredicates 

@@ -1,0 +1,12 @@
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\bin\Debug\netcoreapp3.1\TransformGraph.Contracts.deps.json
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\bin\Debug\netcoreapp3.1\TransformGraph.Contracts.dll
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\bin\Debug\netcoreapp3.1\TransformGraph.Contracts.pdb
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\bin\Debug\netcoreapp3.1\TransformProvider.Reflection.Contracts.dll
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\bin\Debug\netcoreapp3.1\TransformProvider.Reflection.Contracts.pdb
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\obj\Debug\netcoreapp3.1\TransformGraph.Contracts.csprojAssemblyReference.cache
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\obj\Debug\netcoreapp3.1\TransformGraph.Contracts.AssemblyInfoInputs.cache
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\obj\Debug\netcoreapp3.1\TransformGraph.Contracts.AssemblyInfo.cs
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\obj\Debug\netcoreapp3.1\TransformGraph.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\obj\Debug\netcoreapp3.1\TransformGraph.Contracts.csproj.CopyComplete
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\obj\Debug\netcoreapp3.1\TransformGraph.Contracts.dll
+C:\Users\dwayn\source\repos\DependencySolver\src\TransformGraph\obj\Debug\netcoreapp3.1\TransformGraph.Contracts.pdb
